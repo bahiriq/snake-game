@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Nardi Snake Game</title>
+    <title>Bahir Snake Game</title>
     <style>
-        body { margin: 0; background: #2c1a12; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #f3e5ab; font-family: 'Georgia', serif; overflow: hidden; }
-        .header { margin-bottom: 10px; text-shadow: 2px 2px 4px #000; font-size: 20px; font-weight: bold; }
-        canvas { background: #d2b48c; border: 8px solid #5d3a1a; border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.8); max-width: 95vw; }
+        body { margin: 0; background: #1a1a1a; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: white; font-family: sans-serif; overflow: hidden; }
+        .header { margin-bottom: 10px; font-size: 22px; font-weight: bold; color: #f3e5ab; text-shadow: 2px 2px 4px #000; }
+        canvas { background: #fff; border: 5px solid #f3e5ab; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5); max-width: 90vw; }
         .ui { margin-top: 15px; }
-        button { padding: 15px 40px; font-size: 20px; background: #8b4513; border: 2px solid #f3e5ab; color: #f3e5ab; border-radius: 30px; cursor: pointer; font-family: inherit; box-shadow: 0 4px #5d3a1a; }
-        button:active { box-shadow: 0 2px #5d3a1a; transform: translateY(2px); }
-        #status { height: 25px; margin-bottom: 5px; font-style: italic; }
+        button { padding: 15px 30px; font-size: 18px; background: #8b4513; border: 2px solid #f3e5ab; color: white; border-radius: 50px; cursor: pointer; font-weight: bold; }
+        button:active { transform: scale(0.95); }
+        #status { height: 30px; font-size: 18px; margin-bottom: 5px; color: #2ecc71; }
     </style>
 </head>
 <body>
     <div class="header">BAHIR SNAKE & NARDI</div>
-    <div id="status">Нажми на кубик!</div>
-    <canvas id="gameCanvas" width="350" height="350"></canvas>
+    <div id="status">Нажми на кнопку!</div>
+    <!-- Установили размер 400 на 400 для твоей картинки -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
     <div class="ui">
         <button onclick="rollDice()">Бросить зары 🎲</button>
     </div>
-    <script src="game.js"></script>
+    <!-- Добавили ?v=99 чтобы Telegram точно обновил игру -->
+    <script src="game.js?v=99"></script>
 </body>
 </html>
